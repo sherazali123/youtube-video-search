@@ -14,7 +14,11 @@ class App extends Component {
 
     this.state = { videos: [], selectedVideo: null };
 
-    YoutubeVideoSearch({ key: API_KEY, term: 'Best Song Ever' }, videos => {
+    this.videoSearch('Best song ever');
+  }
+
+  videoSearch(term) {
+    YoutubeVideoSearch({ key: API_KEY, term }, videos => {
       this.setState({ videos, selectedVideo: videos[0] });
     });
   }
@@ -24,7 +28,7 @@ class App extends Component {
         <div className="align-center main_heading">
           <h3>Youtube Video Search</h3>
         </div>
-        <SearchBar />
+        <SearchBar onTermChange={term => this.videoSearch(term)} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={selectedVideo => this.setState({ selectedVideo })}

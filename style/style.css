@@ -15,3 +15,6 @@
   margin-top: 10px;
   font-weight: 800;
 }
+.list-group-item {
+  cursor: pointer;
+}

@@ -13,10 +13,15 @@ class SearchBar extends Component {
           className="form-control"
           placeholder="Search videos..."
           value={this.state.term}
-          onChange={event => this.setState({ term: event.target.value })}
+          onChange={event => this.onInputChange(event.target.value)}
         />
       </div>
     );
+  }
+
+  onInputChange(term) {
+    this.setState({ term });
+    this.props.onTermChange(term);
   }
 }
 
