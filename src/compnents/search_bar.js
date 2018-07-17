@@ -8,12 +8,13 @@ class SearchBar extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="search-bar col-md-12">
         <input
+          className="form-control"
+          placeholder="Search videos..."
           value={this.state.term}
           onChange={event => this.setState({ term: event.target.value })}
         />
-        Value: {this.state.term}
       </div>
     );
   }

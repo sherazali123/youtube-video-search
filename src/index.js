@@ -21,6 +21,9 @@ class App extends Component {
   render() {
     return (
       <div>
+        <div className="align-center main_heading">
+          <h3>Youtube Video Search</h3>
+        </div>
         <SearchBar />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList

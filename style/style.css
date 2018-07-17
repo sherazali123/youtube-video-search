@@ -1,0 +1,17 @@
+.main_heading {
+  padding: 10px 0 0 0;
+  text-align: center;
+}
+.search-bar {
+  padding: 20px 0;
+  width: 50%;
+  text-align: center;
+}
+
+.details {
+  font-size: 14px;
+}
+.details .title {
+  margin-top: 10px;
+  font-weight: 800;
+}
