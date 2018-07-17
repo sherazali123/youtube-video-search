@@ -1,6 +1,6 @@
 # Youtube Video Search
 
-Web app to search videos from yourbute using ReactJS, Redux and Webpack
+Web app to search videos from youtube using ReactJS, Redux and Webpack
 
 ### Getting Started
 
