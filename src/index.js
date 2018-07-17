@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from './compnents/search_bar';
@@ -23,12 +24,13 @@ class App extends Component {
     });
   }
   render() {
+    const videoSearch = _.debounce(term => this.videoSearch(term), 600);
     return (
       <div>
         <div className="align-center main_heading">
           <h3>Youtube Video Search</h3>
         </div>
-        <SearchBar onTermChange={term => this.videoSearch(term)} />
+        <SearchBar onTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
