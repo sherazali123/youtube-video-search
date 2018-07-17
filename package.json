@@ -1,5 +1,5 @@
 {
-  "name": "Youtube Video Search",
+  "name": "YoutubeVideoSearch",
   "version": "1.0.0",
   "description": "Web app to search videos from youtube using ReactJS, Redux and Webpack",
   "main": "index.js",
